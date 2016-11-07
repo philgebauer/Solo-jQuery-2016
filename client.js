@@ -59,7 +59,8 @@ $('document').ready(function() {
       $(".container").append('<div class="color-block"></div>');
       var $el = $(".container").children().last();
 
-      $el.append("<div class='color-cube " + color + "'> </div>");
+      $el.append("<div class='color-cube  " + color + "'> </div>");
+      $el.css("float", "left");
 
     }
 
