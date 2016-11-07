@@ -1,50 +1,49 @@
+
 var redCounter = 0;
 var yellowCounter = 0;
 var greenCounter = 0;
 var blueCounter = 0;
 
+var color = "";
 
-console.log('hello');
+
 
 $('document').ready(function() {
 
-    whatButton();
-    var color = "";
+findColor();
 
-
-    function whatButton() {
+//function finds the current color based on the button clicked
+    function findColor() {
         $(".color-button").on("click", function() {
             color = $(this).data("color");
             squareColor();
         });
     }
 
-
+//based on what color was click, this function adds to the counter,
+//appends the new count to the counter, and adds the new sqaure to
+//the DOM
     function squareColor() {
 
         switch (color) {
             case "red":
                 createSquares ()
                 redCounter++;
-                console.log("this color is", color);
                 $("#red").text("Total red: " + redCounter);
                 break;
             case "yellow":
                 createSquares ()
                 yellowCounter++;
-                console.log("this color is", color);
                 $("#yellow").text("Total yellow: " + yellowCounter);
                 break;
             case "green":
                 greenCounter++;
                 createSquares ()
                 $("#green").text("Total green: " + greenCounter);
-                console.log("this color is", color);
                 break;
             case "blue":
                 blueCounter++;
                 $("#blue").text("Total blue: " + blueCounter);
-                console.log("this color is", color);
                 createSquares ()
                 break;
             default:
@@ -55,6 +54,8 @@ $('document').ready(function() {
     }
 
 
+//this function grabs the color, and appends the right colored square to
+//the DOM
     function createSquares () {
       $(".container").append('<div class="color-block"></div>');
       var $el = $(".container").children().last();
@@ -63,9 +64,4 @@ $('document').ready(function() {
       $el.css("float", "left");
 
     }
-
-    function counterUpdate () {
-      $
-    }
-
 });
