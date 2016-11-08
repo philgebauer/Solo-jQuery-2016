@@ -1,3 +1,5 @@
+//global variables
+
 
 var redCounter = 0;
 var yellowCounter = 0;
@@ -5,8 +7,6 @@ var greenCounter = 0;
 var blueCounter = 0;
 
 var color = "";
-
-
 
 $('document').ready(function() {
 
@@ -20,7 +20,7 @@ findColor();
         });
     }
 
-//based on what color was click, this function adds to the counter,
+//based on what color was clicked, this function adds to the counter,
 //appends the new count to the counter, and adds the new sqaure to
 //the DOM
     function squareColor() {
